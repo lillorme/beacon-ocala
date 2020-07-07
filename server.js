@@ -34,16 +34,10 @@ const firestore = firebase.firestore()
 
 const normalizePort = port => parseFloat(port, 10);
 
-const port = normalizePort(process.env.PORT || 9000);
+
 
 
 const app = express();
-
-app.use(express.static('public'));
-
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve(_dirname, 'public', 'index.html'));
-});
 
 const typeDefs = gql`
   type Query {
@@ -253,6 +247,12 @@ const context = ({req}) => ({user: req.user && db.users.get(req.user.sub)});
 const apolloServer = new ApolloServer({typeDefs, resolvers, context});
 apolloServer.applyMiddleware({app, path: '/graphql'});
 
+const port = normalizePort(process.env.PORT || 9000);
+app.use(express.static('public'));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(_dirname, 'public', 'index.html'));
+});
 
 
 app.listen(port, () => console.info(`Server started on port ${port}`));
