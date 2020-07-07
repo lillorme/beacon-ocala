@@ -5,6 +5,7 @@ const express = require('express');
 const firebase = require('firebase/app');
 require('firebase/firestore');
 
+const cors = require('cors');
 
 const  config = {
   apiKey: "AIzaSyDJvzXPTGdddPUB2hRtWXLjA_oU0MEZAUw",
@@ -38,7 +39,7 @@ const port = normalizePort(process.env.PORT || 9000);
 
 
 const app = express();
-
+app.use(cors());
 
 
 const typeDefs = gql`
