@@ -15,7 +15,12 @@ import ContactUs from './pages/contact-us/contact-us.component';
 import Page404 from './pages/404/404.pages';
 import SolutionsPage from './pages/solutions/solutionspage.component';
 import Resources from './pages/resources/resources.component';
-import Support from './pages/support/support.component'
+import Support from './pages/support/support.component';
+import Jail from './pages/jail/jail.component';
+import Cad from './pages/cad/cad.component';
+import Records from './pages/records/records.component';
+import advanceAthentication from './pages/advanceAthentication/advanceAthentication.component';
+
 //Global js
 import { scrollAction, projectTabClick} from './js/script';
 import $ from 'jquery';
@@ -46,7 +51,7 @@ class App extends React.Component{
     addPagesCollectionAndDocuments('pages', PageData.map(( {title, meta, sections} ) => ( {title, meta, sections} )));
     //addPagesCollectionAndDocuments('images', Reusables.map(( {title, sections} ) => ( {title, sections} )));
     //addPagesCollectionAndDocuments('videos', PageData.map(( {title, meta, sections} ) => ( {title, meta, sections} )));
-    //addPagesCollectionAndDocuments('menus', MenuData.map(( {title, menu} ) => ( {title, menu} )));
+    addPagesCollectionAndDocuments('menus', MenuData.map(( {title, menu} ) => ( {title, menu} )));
     //addPagesCollectionAndDocuments('headers', HeaderData.map(( {title, sections} ) => ( {title, sections} )));
     //addPagesCollectionAndDocuments('footers', FooterOneData.map(( {title, sections} ) => ( {title, sections} )));
   }
@@ -76,7 +81,10 @@ class App extends React.Component{
           <Route exact path='/contact_us' component={ContactUs} />
           <Route exact path='/resources' component={Resources} />
           <Route exact path='/support' component={Support} />
-          <Route path='/blog/:blogId' component={Blog} />
+          <Route exact path='/cad' component={Cad} />
+          <Route path='/jail' component={Jail} />
+          <Route path='/records' component={Records} />
+          <Route path='/advance-authentication' component={advanceAthentication} />
           <Route component={Page404} />
         </Switch>
   

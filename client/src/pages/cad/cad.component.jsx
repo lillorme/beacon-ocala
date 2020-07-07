@@ -5,7 +5,7 @@ import Sections from '../../components/sections/sections.component';
 import { loadSinglePage} from '../../graphql/request';
 import {GetAsyncAwaitResponse} from '../../js/script';
 
-const Cad= (props) => {
+const Cad = (props) => {
 
     let PageData;
     const results = GetAsyncAwaitResponse(loadSinglePage('cad'));
