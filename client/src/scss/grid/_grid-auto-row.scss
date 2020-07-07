@@ -1,0 +1,81 @@
+
+$grid-auto-row-size: 200;
+
+//grid-auto-rows: 15px;
+
+@mixin grid-auto-row {
+
+  @for $i from 1 through $grid-auto-row-size {
+
+    $size: em($i);
+    .gar-#{$i} {grid-auto-rows: minmax($size, auto);}
+
+  }
+
+}
+
+@include grid-auto-row;
+
+$grg-size: 12;
+
+@mixin grid-auto-rows {
+
+  @for $i from 1 through $grg-size {
+
+    $size: em($i);
+
+    @media (max-width: em(575)) {
+
+      .gar-xm-#{$i} {
+
+        grid-auto-rows: minmax($size, auto);
+
+      }
+
+    }
+
+    @media (min-width: em(576)) {
+
+      .gar-sd-#{$i} {
+
+        grid-auto-rows: minmax($size, auto);
+
+      }
+
+    }
+
+    @media (min-width: em(768)) {
+
+      .gar-md-#{$i} {
+
+        grid-auto-rows: minmax($size, auto);
+
+      }
+
+    }
+
+    @media (min-width: em(992)) {
+
+      .gar-ld-#{$i} {
+
+        grid-auto-rows: minmax($size, auto);
+
+      }
+
+    }
+
+    @media (min-width: em(1200)) {
+
+      .gar-xl-#{$i} {
+
+        grid-auto-rows: minmax($size, auto);
+
+      }
+
+    }
+
+  }
+
+}
+
+@include grid-auto-rows;

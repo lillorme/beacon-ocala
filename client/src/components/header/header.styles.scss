@@ -1,0 +1,43 @@
+header.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: rgba(35, 82, 160, 1);
+    .section_overlay{
+        transition: .5s;
+        .grid-row{
+            grid-template-columns: 300px auto 300px !important;
+        }
+    }
+}
+
+body{
+
+    &.home{
+        header.header{
+            .section_overlay{
+                background-color: rgba(35, 82, 160, .3) ;
+            }
+        }
+    }
+
+    &.top{
+        header.header{
+            .section_overlay{
+                @media all {
+                    background-color: rgba(35, 82, 160, .3) !important; 
+                }
+                
+            }
+        }
+    }
+}
+
+.header-logo{
+    img{
+        height:80px;
+        width: auto;
+    }
+}

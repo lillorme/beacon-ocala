@@ -1,0 +1,115 @@
+.grid-row{
+  &_column{
+    &_inner{
+      &_overlay{
+        &.stacked-left, &.stacked-right, &.left-to-right, &.right-to-left, &.button-to-right{
+          align-items: center;
+          @media (max-width: em(575)) {
+            max-width: 400px;
+            margin: auto;
+          }
+          grid-gap: 15px;
+          @media (min-width: em(575)) {
+
+            display: grid;
+            grid-template-columns: auto auto !important;
+            justify-items: center;
+            align-items: center;
+            .image{
+              margin:0;
+            }
+
+            .box-body{
+
+            }
+
+          }
+
+        }
+      
+
+        &.stacked-right, &.right-to-left {
+
+          @media (min-width: em(768)) {
+            direction: rtl;
+            *{
+              direction: initial;
+            }
+          }
+
+          .image {
+            direction: initial;
+          }
+
+          .box-body {
+            direction: initial;
+          }
+
+        }
+
+        &.button-to-right{
+          grid-template-columns: 1fr 200px !important;
+        }
+        &.button-to-left{
+          grid-template-columns: 200px 1fr !important;
+          direction: rtl;
+          *{
+            direction: initial;
+          }
+          @media (min-width: em(768)) {
+            direction: initial;
+          }
+        }
+      }
+
+    }
+  }
+
+  &.column-section-left-to-right{
+
+    .grid-column{
+      &:nth-child(even) {
+        .inner{
+          direction: rtl;
+          *{
+            direction: initial;
+          }
+        }
+      }
+    }
+
+  }
+
+  &.column-section-right-to-left{
+
+    .grid-column{
+      &:nth-child(odd) {
+        .inner{
+          direction: rtl;
+          *{
+            direction: initial;
+          }
+        }
+      }
+    }
+
+  }
+
+  &.grid-row-wrapper-full{
+    .grid-column {
+      > .inner {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+
+}
+
+.site-container{
+  .section{
+    &-wrapper-full{
+
+    }
+  }
+}

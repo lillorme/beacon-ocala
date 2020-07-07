@@ -1,0 +1,42 @@
+body {
+    font-family: 'Open Sans Condensed';
+    letter-spacing: 1.3px;
+    font-size: 18px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  * {
+    box-sizing: border-box;
+    line-height: 30px;
+  }
+
+  img, embed, object, video {
+    width: 100%;
+}
+
+.text-center{
+  text-align: center;
+}
+.text-left{
+  text-align: left;
+}
+.text-right{
+  text-align: right;
+}
+
+.text-justify{
+  text-align: justify;
+}
+p{
+  margin: 16px 0;
+  padding: 0;
+}
+.innder-body{
+  padding-top: 109px;
+}
+
+@import './scss/all';

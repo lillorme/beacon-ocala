@@ -1,0 +1,18 @@
+
+$padding-size: 200;
+
+@mixin padding {
+  @for $i from 1 through $padding-size {
+    $padding: em($i);
+    /* padding #{$padding} */
+    .p-#{$i} {padding: $padding;}
+    .pl-#{$i} {padding-left: $padding;}
+    .pr-#{$i} {padding-right: $padding;}
+    .pt-#{$i} {padding-top: $padding;}
+    .pb-#{$i} {padding-bottom: $padding;}
+    .px-#{$i} {padding-left: $padding; padding-right: $padding;}
+    .py-#{$i} {padding-top: $padding; padding-bottom: $padding;}
+  }
+}
+
+@include padding;

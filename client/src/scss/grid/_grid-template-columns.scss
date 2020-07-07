@@ -1,0 +1,81 @@
+
+$grid-template-columns-size: 12;
+
+@mixin grid-template-columns {
+
+  @for $i from 1 through $grid-template-columns-size {
+
+    .gtc-#{$i}  {
+
+      grid-template-columns: repeat($i, minmax(0, 1fr)) !important;
+
+
+    }
+
+  }
+
+}
+
+@include grid-template-columns;
+
+$grid-template-columns-size: 12;
+
+@mixin grid-template-responsive-columns {
+
+  @for $i from 1 through $grid-template-columns-size {
+
+    @media (max-width: em(575)) {
+
+      .gtc-xm-#{$i} {
+
+        grid-template-columns: repeat($i, minmax(0, 1fr)) !important;
+
+      }
+
+    }
+
+    @media (min-width: em(576)) {
+
+      .gtc-sd-#{$i} {
+
+        grid-template-columns: repeat($i, minmax(0, 1fr)) !important;
+
+      }
+
+    }
+
+    @media (min-width: em(768)) {
+
+      .gtc-md-#{$i} {
+
+        grid-template-columns: repeat($i, minmax(0, 1fr)) !important;
+
+      }
+
+    }
+
+    @media (min-width: em(992)) {
+
+      .gtc-ld-#{$i} {
+
+        grid-template-columns: repeat($i, minmax(0, 1fr)) !important;
+
+      }
+
+    }
+
+    @media (min-width: em(1200)) {
+
+      .gtc-xl-#{$i} {
+
+        grid-template-columns: repeat($i, minmax(0, 1fr)) !important;
+
+      }
+
+    }
+
+  }
+
+}
+
+@include grid-template-responsive-columns;

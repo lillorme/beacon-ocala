@@ -1,0 +1,78 @@
+
+$grid-column-span-size: 12;
+
+@mixin grid-column-span {
+
+  @for $i from 1 through $grid-column-span-size {
+
+    .gcs-#{$i}  {
+
+      grid-column: 1 / span #{$i};
+
+    }
+
+}
+
+}
+
+@include grid-column-span;
+
+@mixin grid-responsive-column-span {
+
+  @for $i from 1 through $grid-column-span-size {
+
+    @media (max-width: em(575)) {
+
+      .gcs-xm-#{$i} {
+
+        grid-column: 1 / span #{$i};
+
+      }
+
+    }
+
+    @media (min-width: em(576)) {
+
+      .gcs-sd-#{$i} {
+
+        grid-column: 1 / span #{$i};
+
+      }
+
+    }
+
+    @media (min-width: em(768)) {
+
+      .gcs-md-#{$i} {
+
+        grid-column: 1 / span #{$i};
+
+      }
+
+    }
+
+    @media (min-width: em(992)) {
+
+      .gcs-ld-#{$i} {
+
+        grid-column: 1 / span #{$i};
+
+      }
+
+    }
+
+    @media (min-width: em(1200)) {
+
+      .gcs-xl-#{$i} {
+
+        grid-column: 1 / span #{$i};
+
+      }
+
+    }
+
+  }
+
+}
+
+@include grid-responsive-column-span;

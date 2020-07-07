@@ -1,0 +1,120 @@
+.heroLeftColumnData{
+    h2{
+        font-family: $theme-hero-title-font-family;
+        font-size: 52px;
+        color: white;
+        font-weight: $theme-hero-title-font-weight;
+        text-align: left;
+        line-height: $theme-hero-title-line-height;
+    }
+
+    p{
+        font-size: $theme-heading-lg-size-tablet;
+        line-height: $theme-heading-lg-line-height;
+        font-family: $theme-heading-lg-font-family;
+        font-weight: $theme-heading-lg-font-weight;
+        text-decoration: $theme-heading-lg-text-decoration;
+        font-style: $theme-heading-lg-font-style;
+        letter-spacing: calc(var($theme-heading-lg-letter-spacing) * 1em);
+        color: $theme-heading-lg-color-light;
+    }
+}
+
+.circle{
+    border-radius: 50%;
+    &.icon{
+        .image{
+            svg{
+                padding:5px;
+            }
+        }
+    }
+    &-theme-first-bg-color{
+        background-color: $theme-first-color;
+    }
+    &-theme-fift-bg-color{
+        background-color: $theme-fift-color;
+    }
+} 
+.white-icon-color{
+    *{
+        color:white;
+    }
+}
+
+.contact-us-information{
+    *{
+        color: white;
+    }
+    .gtc-130-1fr{
+        grid-template-columns: 130px 1fr;
+    }
+}
+
+
+.footerMenu{
+    grid-gap: 30px;
+}
+
+.homeHero{
+    margin-top: -109px;
+    background-color: $theme-first-color;
+    z-index: 1;
+    .hero{
+        z-index: 2;
+    }
+}
+
+.project-tabs{
+    .tabs-container{
+        ul.project-tabs-container{
+            list-style-type: none;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(1px, 1fr));
+            max-width: 600px;
+            margin: auto;
+            &.full-width{
+                max-width: 100%;
+            }
+            &.four{
+                grid-template-columns: repeat(4, minmax(1px, 1fr));
+            }
+           
+        }
+    }
+    .column-container{
+        .project-columns{
+            display: none;
+            &.show{
+                display: block;
+            }
+            .row{
+                display: grid;
+                grid-template-columns: 400px 1fr;
+                align-items: center;
+                grid-gap: 40px;
+                .content{
+                    h2{
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.theLatestTechTab{
+
+    .project-tabs-container{
+        .project-tab{
+            display: grid;
+            grid-template-columns: 50px 1fr;
+            border-bottom: 2px solid $theme-fift-color;
+            padding: 15px 0;
+            grid-gap: 20px;
+        }
+    }
+    
+}
+

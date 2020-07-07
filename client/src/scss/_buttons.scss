@@ -1,0 +1,49 @@
+.grid-row_column_inner_button-container{
+    .theme-second-color-button{
+        background-color: $theme-second-color !important;
+        a{
+            color: $theme-first-color;
+        }
+    }
+
+    .theme-fourth-color-button{
+        background-color: $theme-fourth-color !important;
+        a{
+            color: $theme-first-color;
+        }
+    }
+    
+    
+    .button, button{
+        padding: 0 !important;
+        max-width: 270px;
+        width: 100%;
+        a{
+            display: block;            
+            padding: 15px 10px;
+        }
+    }
+}
+
+.button{
+    font-weight: 800;
+    padding: 0 !important;
+    font-weight: 700;
+    max-width: 270px;
+    width: 100%;
+    word-break: break-word;
+    a{
+        display: block;            
+        padding: 15px 10px;
+        font-weight: bold;
+        word-break: break-word;
+    }
+    &-theme-second-color-rgba{
+        background-color: $theme-second-color !important;
+        color: $theme-first-color;
+        a{
+            color: $theme-first-color;
+        } 
+    }
+}
+

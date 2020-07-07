@@ -1,0 +1,13 @@
+
+@mixin grid_center_in_parent(){
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+
+
+
+
+

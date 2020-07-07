@@ -1,0 +1,18 @@
+
+$grid-column-end-size: 12;
+
+@mixin grid-column-end {
+
+  @for $i from 1 through $grid-column-end-size {
+
+    .gce-span-#{$i}  {
+
+      grid-column-end: span $i;
+
+    }
+
+  }
+
+}
+
+@include grid-column-end;

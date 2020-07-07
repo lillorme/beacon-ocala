@@ -1,0 +1,79 @@
+@import '../../scss/slick-theme';
+@import '../../scss/slick';
+/* the slides */
+
+.slick-slide, .slick-list {
+    *{ outline: none !important; }
+}
+
+
+.slick-initialized .slick-slide {
+    display: block;
+    > div{
+        width:100%
+    }
+    .grid-row_column{
+
+        
+        @media (min-width:480px) {
+            padding: 0 10px !important;
+        }
+
+    }
+
+    &.slick-active{
+    
+            &:first-child{
+                .grid-row_column{
+                    &:first-child{
+                        @media (min-width:480px) {
+                            padding-left: 0 !important;
+                        }
+                    }
+                }
+            }
+        
+            &:last-child{
+                .grid-row_column{
+                    &:last-child{
+                        @media (min-width:480px) {
+                            padding-right: 0 !important;
+                        }
+                    }
+                }
+            }
+        
+        }
+}
+
+.slick-track {
+    display: flex !important;
+
+    .slick-slide {
+        display: flex !important;
+        height: auto !important;
+
+        .grid-row_column{
+            height: 100%;
+            .grid-row_column_inner{
+                height: 100%;
+                .grid-row_column_inner_overlay{
+                    height: 100%;
+                }
+            }
+
+            &.has-button{
+                .grid-row_column_inner_overlay{
+                    padding-bottom: 50px !important;
+                    position: relative;
+                    .grid-row_column_inner_button-container{
+                        position: absolute;
+                        bottom: 15px;
+                        left: 0;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

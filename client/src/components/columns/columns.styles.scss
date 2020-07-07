@@ -1,0 +1,18 @@
+
+.grid-column {
+    &.has-button{
+        .grid-row_column_inner_overlay{
+            padding-bottom:50px !important;
+            position: relative;
+            .grid-row_column_inner_button-container{
+              position: absolute;
+              bottom:15px;
+              width: 100%;
+              left: 0;
+            }
+        }
+    }
+  }
+  .grid-row_column_inner_overlay{
+      height: 100%;
+  }

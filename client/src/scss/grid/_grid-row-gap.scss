@@ -1,0 +1,80 @@
+
+$grid-row-gap-size: 200;
+
+//grid-row-gap: 15px;
+
+@mixin grid-row-gap {
+
+  @for $i from 1 through $grid-row-gap-size {
+
+    $gap: em($i);
+    .grg-#{$i} {grid-row-gap: $gap;}
+
+  }
+
+}
+
+@include grid-row-gap;
+
+$grrg-size: 12;
+
+@mixin grid-row-responsive-gap {
+
+  @for $i from 1 through $grrg-size {
+
+    $gap: em($i);
+    @media (max-width: em(575)) {
+
+      .grg-xm-#{$i} {
+
+        grid-row-gap: $gap;
+
+      }
+
+    }
+
+    @media (min-width: em(576)) {
+
+      .grg-sd-#{$i} {
+
+        grid-row-gap: $gap;
+
+      }
+
+    }
+
+    @media (min-width: em(768)) {
+
+      .grg-md-#{$i} {
+
+        grid-row-gap: $gap;
+
+      }
+
+    }
+
+    @media (min-width: em(992)) {
+
+      .grg-ld-#{$i} {
+
+        grid-row-gap: $gap;
+
+      }
+
+    }
+
+    @media (min-width: em(1200)) {
+
+      .grg-xl-#{$i} {
+
+        grid-row-gap: $gap;
+
+      }
+
+    }
+
+  }
+
+}
+
+@include grid-row-responsive-gap;

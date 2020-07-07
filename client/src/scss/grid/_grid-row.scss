@@ -1,0 +1,46 @@
+
+
+
+.grid-row{
+
+  display: grid;
+
+
+
+  &.eq-col{
+
+
+  }
+
+  &.row{
+
+    &-1{
+      grid-template-rows: 1fr;
+    }
+
+  }
+
+  &.row{
+    &-2{
+      grid-template-rows: 1fr 1fr;
+    }
+  }
+  &.show-sidebar{
+    @media(max-width: 1100px) {
+      display: block !important;
+    }
+
+    .main{
+      @media(max-width: 1100px) {
+        width: 100%;
+        max-width: 960px;
+        margin: auto;
+      }
+    }
+    .sidebar{
+      @media(max-width: 1100px) {
+        display: none;
+      }
+    }
+  }
+}

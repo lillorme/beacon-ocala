@@ -1,0 +1,121 @@
+/** Colors */
+$theme-first-color: #2352a0;
+.theme-first-color{
+    color: $theme-first-color;
+}
+.theme-first-bg-color{
+    background-color: $theme-first-color;
+}
+$theme-first-color-rgba: rgba(35,82,160,1);
+.theme-first-color-rgba{
+    color: $theme-first-color-rgba;
+}
+.theme-first-bg-color-rgba{
+    color: $theme-first-color-rgba;
+}
+$theme-second-color: #fff200;
+$theme-second-color-rgba: rgba(255,242,0,1);
+.theme-second-bg-color{
+    background-color: $theme-second-color;
+}
+
+.theme-second-color{
+    color: $theme-second-color;
+    *{
+        color: $theme-second-color;
+    }
+}
+$theme-third-color: #165bfb;
+$theme-third-color-rgba:rgb(22,91,251);
+
+$theme-fourth-color: white;
+$theme-fourth-color-rgba: rgba(255,255,255,1);
+
+.theme-fourth-color-rgba, .theme-fourth-color{
+    *{
+        color: white;
+    }
+}
+$theme-fift-color: #8cbde9;
+$theme-fift-color-rgba: rgba(140,189,233, 1);
+
+$theme-six-color: #ebeced;
+$theme-six-color-rgba: rgba(235,236,237,1);
+
+$theme-seventh-color: #b1b2b3;
+.theme-seventh-color{
+    color: $theme-seventh-color;
+    *{
+        color: $theme-seventh-color;
+    }
+}
+
+$theme-seventh-color-rgba: rgba(177,178,179,1);
+
+$theme-eighth-color: #b8b9ba;
+
+.theme-eighth-color{
+    color: $theme-eighth-color;
+    *{
+        color: $theme-eighth-color;
+    }
+}
+
+$theme-eighth-color-rgba: rgba(184,185,186,1);
+
+$theme-ninth-color: #838282;
+
+.theme-ninth-color{
+    color: $theme-ninth-color;
+    *{
+        color: $theme-ninth-color;
+    }
+}
+.theme-ninth-bg-color{
+    background-color: $theme-ninth-color;
+}
+$theme-ninth-color-rgba: rgba(131,130,130,1);
+
+$theme-tenth-color: #5ad96a;
+
+.theme-tenth-color{
+    color: $theme-tenth-color;
+    *{
+        color: $theme-tenth-color;
+    }
+}
+
+$theme-tenth-color-rgba: rgba(90,217,106,1);
+
+/** Font Color **/
+$theme-heading-lg-color-light: rgba(255,255,255,1);
+$theme-primary-h1-color: $theme-first-color;
+/** Fonts Family **/
+$theme-defaut-font-family: 'Asap', sans-serif;
+$theme-hero-title-font-family:'Asap', sans-serif;
+$theme-heading-lg-font-family:'Asap', sans-serif;
+
+/** Fonts Size **/
+$theme-default-font-size: 18px;
+$theme-default-big-font-size: 18px;
+$theme-hero-title-size-tablet: 45px;
+$theme-heading-lg-size-tablet: 25px;
+
+/** Line Heights **/
+$theme-hero-title-line-height: 1;
+$theme-heading-lg-line-height: 1.29;
+
+/** Font Weight **/
+$theme-hero-title-font-weight: 600;
+$theme-heading-lg-font-weight: 600;
+
+/** Text Decoration **/
+$theme-hero-title-text-decoration: none;
+$theme-heading-lg-text-decoration: none;
+
+/** Font Style **/
+$theme-hero-title-font-style: normal;
+$theme-heading-lg-font-style: normal;
+
+/** Letter Spacing **/
+$theme-heading-lg-letter-spacing: 0;
